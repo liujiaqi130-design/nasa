@@ -1,3 +1,5 @@
+Warning: fs was declared with const; use let for reassignable variables.
+Warning: b was declared with const; use let for reassignable variables.
 const navToggle = document.querySelector('.nav-toggle');
 const nav = document.querySelector('#site-nav');
 navToggle.addEventListener('click', () => {
@@ -11,6 +13,11 @@ nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
   navToggle.setAttribute('aria-expanded', 'false');
   navToggle.setAttribute('aria-label', 'Open chapter menu');
 }));
+
+// Keep the story in the project brief's chapter order: Distance, Machine, Evidence.
+const machineChapter = document.querySelector('#discoveries');
+const evidenceChapter = document.querySelector('#mission');
+evidenceChapter.before(machineChapter);
 
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -48,7 +55,7 @@ document.querySelectorAll('.fact-toggle').forEach(button => button.addEventListe
   const open = button.getAttribute('aria-expanded') === 'true';
   button.setAttribute('aria-expanded', String(!open));
   detail.hidden = open;
-  button.innerHTML = open ? 'SHOW FACT NOTE <span>ï¼‹</span>' : 'HIDE FACT NOTE <span>âˆ’</span>';
+  button.innerHTML = open ? 'SHOW FACT NOTE <span>＋</span>' : 'HIDE FACT NOTE <span>−</span>';
 }));
 
 const instrumentDetails = {
@@ -69,8 +76,7 @@ introVideo.addEventListener('error', () => {
   const message = document.createElement('p');
   message.className = 'video-error';
   message.innerHTML = window.location.protocol === 'file:'
-    ? 'This browser canâ€™t play the supplied MOV file inline. <a href="assets/project-intro.MOV" download>Download the project intro</a> or convert it to MP4 for easier browser playback.'
+    ? 'This browser can’t play the supplied MOV file inline. <a href="assets/project-intro.MOV" download>Download the project intro</a> or convert it to MP4 for easier browser playback.'
     : 'The supplied MOV is kept in the local project but is not part of this hosted copy. Add a compressed MP4 to the assets folder and update the video source to publish it.';
   introVideo.insertAdjacentElement('afterend', message);
 }, { once: true });
-
