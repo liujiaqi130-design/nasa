@@ -1,35 +1,34 @@
-# Abandoned, Not Forgotten
+# Hi, Earth. Iâ€™m Opportunity.
 
-A responsive, browser-based story about Mars rover missions. Built with HTML, CSS, and vanilla JavaScript; no build step or package install is required.
+A responsive, high-school-friendly scrollytelling prototype about NASAâ€™s Mars Exploration Rover Opportunity. Built with plain HTML, CSS, and vanilla JavaScript.
 
-## Run locally
+## Run it
 
-Open `index.html` in a browser, or open this folder in Visual Studio Code and use its Live Server extension. The site is static and can also be hosted on GitHub Pages.
+Open `index.html` in a browser, or open this folder in Visual Studio Code and use Live Server. No build tools or installs are required. An internet connection is needed for the NASA panorama background and Google Fonts.
 
-## Whatâ€™s included
+## Project assets
 
-- Six responsive story chapters, from mission purpose to a completed-mission archive.
-- Mobile chapter menu, scroll-triggered reveals, interactive Curiosity instrument markers, and an illustrative landing-sequence animation.
-- A schematic Gale Crater route diagram. It is expressly labeled as a story map and not navigation data.
-- Curiosity is described as active; no live or current telemetry is presented.
+- `assets/project-intro.MOV` â€” supplied project introduction video. This is 214 MB; browsers vary in MOV playback support. The page has a download fallback and recommends converting to MP4 for reliable playback. This file is kept in the local project but is too large for a normal GitHub file upload (100 MB per file). Host it separately or export a compressed MP4 before publishing.
+- `assets/opportunity-orbit.gif` â€” supplied trajectory animation. Its measurements and labels are identified in the page as unverified project artwork, and it is clearly distinguished from Opportunityâ€™s Mars surface route.
+- `assets/mars-global-view.jpg` â€” PIA04591, NASA/JPL/Malin Space Science Systems. Extracted from the supplied project archive.
 
-## Imagery and credits
+The NASA Opportunity panorama in the story uses PIA05495, credited NASA/JPL/Cornell, via the NASA/JPL Photojournal asset library. NASA content should be used according to [NASAâ€™s image and media guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/). This is an independent student project and does not imply NASA endorsement.
 
-Images load from NASAâ€™s public image asset library and need an internet connection. The page credits NASA / JPL-Caltech / MSSS and links to the associated mission information:
+## Story framework
 
-- [Curiosity panorama from Vera Rubin Ridge â€” PIA22210](https://images.nasa.gov/details/PIA22210)
-- [Spirit mission image â€” PIA04653](https://images.nasa.gov/details/PIA04653)
-- [Opportunity mission image â€” PIA04413](https://images.nasa.gov/details/PIA04413)
-- [Mars Pathfinder / Sojourner image â€” PIA01122](https://images.nasa.gov/details/PIA01122)
+The first-person Oppy narration is imagined for storytelling; Opportunity was a robot and did not speak or have feelings. Scientific and mission facts are starter copy based on NASA sources. The team expects updated NASA material and can replace the current copy later. No live telemetry is shown.
 
-NASA media use guidance: [NASA Images and Media Usage Guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/). NASA content is generally available for educational or informational use, subject to the guidelines. The NASA name and insignia are not used as project branding, and the page states that NASA does not endorse the project. Verify individual asset credits and any third-party restrictions before redistributing images or using this project commercially. If the NASA-hosted image files are unavailable, the page retains its layouts but the image panels may show their fallback colors.
+The NASA-sourced facts currently included:
 
-## Sources for mission context
+- Opportunity launched July 7, 2003, and landed at Meridiani Planum in January 2004.
+- Its planned primary mission was 90 Martian days, or sols.
+- It studied rocks and soils for evidence of past water; the â€œblueberriesâ€ are small hematite-rich spherules.
+- The roverâ€™s last communication was June 10, 2018; NASA declared the mission complete February 13, 2019.
+- Its end-of-mission odometry was 45.16 km (28.06 miles), after 5,111 sols.
 
-- [NASA â€” Curiosity / Mars Science Laboratory](https://science.nasa.gov/mission/msl-curiosity/)
-- [NASA â€” Mars Exploration Rover Spirit](https://science.nasa.gov/mission/mer-spirit/)
-- [NASA â€” Mars Exploration Rover Opportunity](https://science.nasa.gov/mission/mer-opportunity/)
-- [NASA â€” Mars Pathfinder](https://science.nasa.gov/mission/mars-pathfinder/)
+Sources: [NASA Science / Opportunity](https://science.nasa.gov/mission/mer-opportunity/), [NASA / Spirit and Opportunity science objectives](https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/science-objectives/), [NASA/JPL / Opportunity at El Capitan (PIA05495)](https://photojournal.jpl.nasa.gov/catalog/PIA05495), and [NASA media guidelines](https://www.nasa.gov/nasa-brand-center/images-and-media/).
 
-The landing animation is a short visual metaphor for entry, descent, and touchdown, not an accurate physics or operations simulator. The rover drawing is a simplified illustration, not a scale engineering diagram. The route map is schematic and not a live rover location.
+## Interactions
+
+Scroll-driven reveals and narrative prompts, reading progress bar, responsive chapter navigation, expandable fact notes, and clickable rover instrument markers. The page respects reduced-motion preferences.
 

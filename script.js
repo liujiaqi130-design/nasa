@@ -1,17 +1,15 @@
-const menuButton = document.querySelector('.menu-toggle');
-const nav = document.querySelector('#chapter-nav');
-
-menuButton.addEventListener('click', () => {
-  const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-  menuButton.setAttribute('aria-expanded', String(!isOpen));
-  menuButton.setAttribute('aria-label', isOpen ? 'Open chapter navigation' : 'Close chapter navigation');
-  nav.classList.toggle('open', !isOpen);
+const navToggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('#site-nav');
+navToggle.addEventListener('click', () => {
+  const open = navToggle.getAttribute('aria-expanded') === 'true';
+  navToggle.setAttribute('aria-expanded', String(!open));
+  navToggle.setAttribute('aria-label', open ? 'Open chapter menu' : 'Close chapter menu');
+  nav.classList.toggle('open', !open);
 });
-
 nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
   nav.classList.remove('open');
-  menuButton.setAttribute('aria-expanded', 'false');
-  menuButton.setAttribute('aria-label', 'Open chapter navigation');
+  navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.setAttribute('aria-label', 'Open chapter menu');
 }));
 
 const revealObserver = new IntersectionObserver(entries => {
@@ -24,52 +22,55 @@ const revealObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(item => revealObserver.observe(item));
 
-const instruments = {
-  mast: ['MASTCAM / EYES ON MARS', 'Two cameras capture color, detail, and layered panoramas of the terrain.'],
-  chem: ['CHEMCAM / LASER SPECTROMETER', 'A laser studies the composition of rocks from a distance.'],
-  drill: ['DRILL / SAMPLE COLLECTION', 'The drill collects powdered rock for onboard laboratory analysis.']
-};
-const panel = document.querySelector('.hotspot-panel');
-document.querySelectorAll('.hotspot').forEach(button => button.addEventListener('click', () => {
-  document.querySelectorAll('.hotspot').forEach(item => item.classList.remove('active'));
-  button.classList.add('active');
-  const [heading, description] = instruments[button.dataset.hotspot];
-  panel.innerHTML = `<span class="panel-kicker">${heading}</span><p>${description}</p>`;
+const progress = document.querySelector('#progress-bar');
+const narratorChip = document.querySelector('.narrator-chip');
+const narratorLine = document.querySelector('#narrator-line');
+const chapters = [...document.querySelectorAll('[data-narrator]')];
+let scrollTicking = false;
+window.addEventListener('scroll', () => {
+  if (scrollTicking) return;
+  scrollTicking = true;
+  requestAnimationFrame(() => {
+    const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.width = `${maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0}%`;
+    const current = chapters.filter(section => section.getBoundingClientRect().top < window.innerHeight * .55).pop();
+    if (current && narratorLine.textContent !== current.dataset.narrator) {
+      narratorLine.textContent = current.dataset.narrator;
+      narratorChip.classList.add('visible');
+    }
+    if (window.scrollY < window.innerHeight * .7) narratorChip.classList.remove('visible');
+    scrollTicking = false;
+  });
+}, { passive: true });
+
+document.querySelectorAll('.fact-toggle').forEach(button => button.addEventListener('click', () => {
+  const detail = button.nextElementSibling;
+  const open = button.getAttribute('aria-expanded') === 'true';
+  button.setAttribute('aria-expanded', String(!open));
+  detail.hidden = open;
+  button.innerHTML = open ? 'SHOW FACT NOTE <span>ï¼‹</span>' : 'HIDE FACT NOTE <span>âˆ’</span>';
 }));
 
-const sequenceButton = document.querySelector('#start-sequence');
-const sequenceVisual = document.querySelector('#sequence-visual');
-const sequenceClock = document.querySelector('#seq-clock');
-const sequenceStatus = document.querySelector('#seq-status');
-const phases = [
-  { at: 0, label: 'ENTRY Â· ATMOSPHERIC BRAKING' },
-  { at: 3, label: 'DESCENT Â· CONTROLLED APPROACH' },
-  { at: 5, label: 'TOUCHDOWN Â· SIGNAL HOME' }
-];
-let sequenceTimer;
-sequenceButton.addEventListener('click', () => {
-  clearInterval(sequenceTimer);
-  sequenceVisual.classList.remove('running');
-  void sequenceVisual.offsetWidth;
-  sequenceVisual.classList.add('running');
-  sequenceButton.disabled = true;
-  sequenceButton.innerHTML = 'SEQUENCE RUNNING <span>Â·Â·Â·</span>';
-  let elapsed = 0;
-  sequenceStatus.textContent = phases[0].label;
-  sequenceClock.textContent = 'Tâˆ’ 07:00';
-  sequenceTimer = setInterval(() => {
-    elapsed += 1;
-    const remaining = Math.max(0, 7 - elapsed);
-    sequenceClock.textContent = remaining === 0 ? 'T+ 00:00' : `Tâˆ’ 00:0${remaining}`;
-    const phase = [...phases].reverse().find(item => elapsed >= item.at);
-    if (phase) sequenceStatus.textContent = phase.label;
-    if (elapsed >= 7) {
-      clearInterval(sequenceTimer);
-      sequenceStatus.textContent = 'ILLUSTRATION COMPLETE Â· SIGNAL RECEIVED';
-      sequenceButton.disabled = false;
-      sequenceButton.innerHTML = 'RUN AGAIN <span>â†»</span>';
-      sequenceVisual.classList.remove('running');
-    }
-  }, 1000);
-});
+const instrumentDetails = {
+  pancam: ['PANCAM / PANORAMIC CAMERA', 'Took detailed images in multiple colors and helped the team study the landscape from a distance.'],
+  mini: ['MINI-TES / HEAT-SENSING SPECTROMETER', 'Measured infrared light to help identify minerals in rocks and soil.'],
+  rat: ['RAT / ROCK ABRASION TOOL', 'Brushed and ground a small patch of rock so instruments could examine a fresher surface.']
+};
+document.querySelectorAll('.instrument-pin').forEach(button => button.addEventListener('click', () => {
+  document.querySelectorAll('.instrument-pin').forEach(pin => pin.classList.remove('active'));
+  button.classList.add('active');
+  const [name, description] = instrumentDetails[button.dataset.tool];
+  document.querySelector('#tool-name').textContent = name;
+  document.querySelector('#tool-description').textContent = description;
+}));
+
+const introVideo = document.querySelector('.intro-video video');
+introVideo.addEventListener('error', () => {
+  const message = document.createElement('p');
+  message.className = 'video-error';
+  message.innerHTML = window.location.protocol === 'file:'
+    ? 'This browser canâ€™t play the supplied MOV file inline. <a href="assets/project-intro.MOV" download>Download the project intro</a> or convert it to MP4 for easier browser playback.'
+    : 'The supplied MOV is kept in the local project but is not part of this hosted copy. Add a compressed MP4 to the assets folder and update the video source to publish it.';
+  introVideo.insertAdjacentElement('afterend', message);
+}, { once: true });
 

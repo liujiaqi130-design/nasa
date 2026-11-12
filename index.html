@@ -3,80 +3,99 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#090d12">
-  <meta name="description" content="Abandoned, Not Forgotten â€” a field guide to the lives and legacies of Mars rovers.">
-  <title>Abandoned, Not Forgotten â€” A Mars Rover Field Guide</title>
+  <meta name="theme-color" content="#090a0d">
+  <meta name="description" content="Meet Opportunity, the Mars rover that turned a 90-sol mission into an extraordinary journey.">
+  <title>Hi, Earth. I'm Opportunity. â€” A Mars Story</title>
   <link rel="preconnect" href="https://images-assets.nasa.gov">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to story</a>
-  <header class="topbar">
-    <a class="brand" href="#home" aria-label="Abandoned, Not Forgotten home"><span class="brand-mark">ANF<span>â†—</span></span><span class="brand-name">FIELD NOTES<br><b>MARS / 01</b></span></a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="chapter-nav" aria-label="Open chapter navigation"><span></span><span></span></button>
-    <nav id="chapter-nav" aria-label="Chapters"><a href="#purpose">Purpose</a><a href="#creation">Creation</a><a href="#terror">Landing</a><a href="#journey">Journey</a><a href="#beyond">Beyond</a><a href="#archive">Archive</a></nav>
-    <a class="top-cta" href="#archive">EXPLORE THE ARCHIVE <span>â†˜</span></a>
+  <a class="skip-link" href="#story">Skip to the story</a>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Oppy field notes home"><span class="wordmark-star">âœ³</span> OPPY <span class="wordmark-sub">FIELD NOTES / 01</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open chapter menu"><span></span><span></span></button>
+    <nav id="site-nav" aria-label="Story chapters"><a href="#intro">Meet Oppy</a><a href="#launch">The trip</a><a href="#mission">The mission</a><a href="#discoveries">What I found</a><a href="#storm">The storm</a><a href="#legacy">The legacy</a></nav>
+    <span class="orbit-tag"><i></i> A DRAFT STORY / NASA DATA UPDATE PENDING</span>
   </header>
-  <main id="main">
-    <section class="hero" id="home" aria-labelledby="hero-title">
-      <div class="hero-image" role="img" aria-label="Curiosity rover's wide-angle panorama of Gale Crater, NASA image PIA22210"></div>
-      <div class="hero-shade"></div><div class="hero-grid"></div>
-      <div class="hero-content reveal"><p class="eyebrow"><i></i> AN INTERPLANETARY FIELD GUIDE <span>â€¢</span> NASA SPACE APPS CHALLENGE</p>
-        <h1 id="hero-title">ABANDONED,<br><em>NOT</em> FORGOTTEN<span class="title-dot">.</span></h1>
-        <div class="hero-bottom"><p class="hero-intro">A story about the machines we send into the dark â€” and what their quiet work leaves behind.</p><a class="circle-link" href="#purpose" aria-label="Scroll to begin">â†“</a></div>
+
+  <main id="story">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-stars" aria-hidden="true"></div><div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-a" aria-hidden="true"></div><div class="hero-orbit orbit-b" aria-hidden="true"></div>
+      <div class="hero-planet" aria-hidden="true"><span class="planet-crater c1"></span><span class="planet-crater c2"></span><span class="planet-crater c3"></span></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="eyebrow-star">âœ³</span> A SMALL ROVER WITH A VERY LONG STORY</p>
+        <h1 id="hero-title">Hi, Earth.<br><em>Iâ€™m Opportunity.</em></h1>
+        <p class="hero-deck">I was built to last 90 Martian days. I kept going for nearly 15 Earth years. Hereâ€™s what I saw along the way.</p>
+        <a class="scroll-cue" href="#intro"><span class="scroll-cue-icon">â†“</span><span>SCROLL TO MEET ME</span></a>
       </div>
-      <div class="hero-index"><span>FIELD LOG / 001</span><span>GALE CRATER Â· MARS</span><span>4.6Â°S Â· 137.4Â°E</span></div>
-      <div class="vertical-label">A STORY IN SIX CHAPTERS</div>
-      <div class="hero-crosshair" aria-hidden="true">+</div>
-    </section>
-    <div class="ticker" aria-hidden="true"><div>THE SIGNAL FADES <b>âœ³</b> THE WORK REMAINS <b>âœ³</b> THE SIGNAL FADES <b>âœ³</b> THE WORK REMAINS <b>âœ³</b> THE SIGNAL FADES <b>âœ³</b></div></div>
-
-    <section class="chapter intro-chapter section-pad" id="purpose">
-      <div class="chapter-meta reveal"><span>01 / PURPOSE</span><span>WHY WE REMEMBER</span></div>
-      <div class="intro-layout"><div class="intro-heading reveal"><p class="eyebrow blue">A QUESTION, LEFT OPEN</p><h2>When a mission<br>ends, <em>what stays?</em></h2><div class="rule"></div></div>
-        <div class="intro-copy reveal"><p class="large-copy">Somewhere on Mars, human-made machines sit beneath an unfamiliar sky. Their radios are silent. Their science changed how we understand another world.</p><p>This is not a story about lost hardware. It is a story about care: for the work, the people behind it, and the places we have only just begun to know.</p><p class="fine-note"><span class="status-dot"></span> CURIOSITY IS STILL ACTIVE. ITS STORY IS STILL BEING WRITTEN.</p></div></div>
-      <div class="stat-strip reveal"><div><strong>2012</strong><span>TOUCHDOWN<br>GALE CRATER</span></div><div><strong>~899 kg</strong><span>ROVER MASS<br>AT LAUNCH</span></div><div><strong>6 wheels</strong><span>ONE LAB<br>ON THE MOVE</span></div><div class="stat-aside">MISSION STATUS<br><b><i></i> ACTIVE</b></div></div>
+      <div class="hero-stamp"><span>MER-B</span><span>01 / 06</span><span>MERIDIANI PLANUM Â· MARS</span></div>
+      <div class="hero-caption">A FIRST-PERSON STORYTELLING VOICE<br>THE ROVER DID NOT SPEAK OR HAVE FEELINGS</div>
     </section>
 
-    <section class="chapter creation section-pad" id="creation">
-      <div class="chapter-meta reveal"><span>02 / CREATION</span><span>MADE TO ASK BETTER QUESTIONS</span></div>
-      <div class="creation-layout"><div class="creation-copy reveal"><p class="eyebrow blue">A LAB, BUILT TO ROAM</p><h2>Curiosity was<br>made to <em>investigate.</em></h2><p>As NASAâ€™s Mars Science Laboratory, Curiosity was designed to assess whether ancient Mars could have supported microbial life. Its instruments read the rocks, air, and radiation â€” clues preserved in the landscape.</p><a class="text-link" href="https://science.nasa.gov/mission/msl-curiosity/" target="_blank" rel="noreferrer">MEET THE MISSION <span>â†—</span></a></div>
-        <div class="rover-card reveal"><div class="card-top"><span>FIG. 01 / FIELD UNIT</span><span>MSL Â· CURIOSITY</span></div><div class="rover-illustration"><div class="rover-glow"></div><svg viewBox="0 0 700 390" role="img" aria-label="Illustration of a Mars rover with interactive instrument hotspots"><g class="rover-drawing" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M180 275h350M205 270l-24 38m83-38 15 38m173-38-16 38m83-38 24 38" stroke-width="7"/><circle cx="181" cy="316" r="29" stroke-width="5"/><circle cx="279" cy="316" r="29" stroke-width="5"/><circle cx="436" cy="316" r="29" stroke-width="5"/><circle cx="533" cy="316" r="29" stroke-width="5"/><path d="M216 264v-74l55-30 135 1 66 43v60H216z" stroke-width="5"/><path d="M258 190l19 71m119-70-11 70m-145-51h198M322 161l17-38 22 1 14 38m-28-40v-64m0 0-36-35m36 35 40-34" stroke-width="4"/><circle cx="337" cy="54" r="11" stroke-width="4"/><path d="M290 230l-91 24m223-56 94-62" stroke-width="3"/><path d="M189 253l-47 13m374-133 46-20" stroke-width="2" stroke-dasharray="4 8"/></g></svg>
-          <button class="hotspot hs-mast" data-hotspot="mast" aria-label="Explore Mastcam instrument">+</button><button class="hotspot hs-chem" data-hotspot="chem" aria-label="Explore ChemCam instrument">+</button><button class="hotspot hs-drill" data-hotspot="drill" aria-label="Explore drill instrument">+</button>
-          <div class="hotspot-panel" aria-live="polite"><span class="panel-kicker">SELECT A HOTSPOT</span><p>Three instruments. Countless questions.</p></div>
-        </div><div class="card-bottom"><span>SELECT A MARKER TO INSPECT</span><span>FIGURE NOT TO SCALE</span></div></div></div>
+    <div class="story-progress" aria-hidden="true"><div id="progress-bar"></div></div>
+    <aside class="narrator-chip" aria-live="polite"><span class="chip-star">âœ³</span><span id="narrator-line">Psstâ€¦ Iâ€™m just up ahead.</span></aside>
+
+    <section class="section intro section-pad" id="intro" data-narrator="First, the introduction. Then we can hit the road.">
+      <div class="section-label"><span>00 / A QUICK HELLO</span><span>BEFORE THE JOURNEY</span></div>
+      <div class="intro-layout">
+        <div class="intro-title reveal"><p class="eyebrow">A NOTE FROM THE STORYTELLER</p><h2 id="intro-title">Before we roll,<br><em>hereâ€™s the deal.</em></h2><div class="scribble">âœ³</div></div>
+        <div class="intro-body reveal">
+          <div class="speech-card"><span class="speech-label">THE IMAGINED VOICE OF OPPY</span><p>â€œIâ€™m Opportunity â€” but you can call me Oppy. Iâ€™m a rover, not a person, so this is a playful way to tell my story. The dates, science, and mission events are real. My thoughts and dialogue are made up.â€</p><span class="speech-tail" aria-hidden="true"></span></div>
+          <p class="small-copy">This page is a <strong>puppet framework</strong> for a student storytelling project. Some details and creative choices may change when the team receives updated NASA materials.</p>
+        </div>
+      </div>
+      <div class="intro-video reveal"><div class="video-heading"><span>01 / PROJECT INTRODUCTION</span><span>YOUR VIDEO Â· SHARED WITH THIS PROJECT</span></div>
+        <video controls playsinline preload="metadata" poster="assets/mars-global-view.jpg" aria-label="Project introduction video">
+          <source src="assets/project-intro.MOV" type="video/quicktime">
+          Your browser may not play this MOV file. <a href="assets/project-intro.MOV">Open or download the project introduction video.</a>
+        </video>
+        <p class="video-caption"><span>â–¶</span> Start with the projectâ€™s own introduction, then follow Oppyâ€™s story. If the clip does not play in your browser, use its download link.</p>
+      </div>
     </section>
 
-    <section class="chapter terror section-pad" id="terror">
-      <div class="chapter-meta reveal"><span>03 / SEVEN MINUTES OF TERROR</span><span>ENTRY Â· DESCENT Â· LANDING</span></div>
-      <div class="terror-layout"><div class="terror-title reveal"><p class="eyebrow blue">A ONE-WAY SEQUENCE</p><h2>Seven minutes.<br><em>No joystick.</em></h2><p>Signals take too long to guide a landing from Earth in real time. Curiosityâ€™s arrival sequence had to unfold on its own, while mission control waited for news.</p><div class="caution">â—‰ &nbsp; ILLUSTRATIVE SEQUENCE â€” NOT AN OPERATIONAL SIMULATOR</div></div>
-        <div class="sequence-card reveal"><div class="sequence-top"><span>LANDING SEQUENCE / CONCEPTUAL</span><span class="seq-clock" id="seq-clock">Tâˆ’ 07:00</span></div><div class="sequence-visual" id="sequence-visual"><div class="mars-disc"></div><div class="trajectory"></div><div class="lander"><span></span></div><div class="seq-status" id="seq-status">READY FOR SEQUENCE</div><div class="sequence-grain"></div></div><div class="sequence-controls"><button class="primary-button" id="start-sequence">RUN ILLUSTRATION <span>â†—</span></button><p>Seven-minute sequence compressed into seven seconds. Motion and forces are not to scale.</p></div><div class="sequence-steps"><div><b>01</b><span>ENTRY</span></div><div><b>02</b><span>DESCENT</span></div><div><b>03</b><span>TOUCHDOWN</span></div></div></div></div>
+    <section class="section launch section-pad" id="launch" data-narrator="Leaving Earth is a long trip. My wheels would have to wait.">
+      <div class="section-label"><span>01 / THE LONG WAY AROUND</span><span>EARTH â†’ MARS</span></div>
+      <div class="split-layout">
+        <div class="chapter-copy reveal"><p class="eyebrow">FIRST, A LITTLE SPACE BETWEEN US</p><h2>Earth got small.<br><em>Mars got closer.</em></h2><p>Opportunity launched in 2003 as one half of NASAâ€™s twin Mars Exploration Rovers. The cruise through space was a different kind of journey from the driving it would do after landing.</p><div class="fact-sticker"><b>07 JUL 2003</b><span>LAUNCH DAY<br>NASA / JPL</span></div></div>
+        <figure class="orbit-figure reveal"><div class="figure-top"><span>PROJECT ART / ORBIT ANIMATION</span><span>SPACE TRIP â‰  SURFACE ROUTE</span></div><img src="assets/opportunity-orbit.gif" alt="Animated illustration showing a spacecraft trajectory between Earth and Mars"><figcaption>The supplied animation is shown as project artwork. Its labels and measurements are a placeholder until the team verifies the underlying data. It is not Oppyâ€™s driving path across Mars.</figcaption></figure>
+      </div>
+      <div class="transition-note reveal"><span class="transition-sparkle">âœ³</span><p>Somewhere between those two planets, the story changes scale.</p><span class="transition-arrow">â†“</span></div>
     </section>
 
-    <section class="chapter journey section-pad" id="journey">
-      <div class="chapter-meta reveal"><span>04 / JOURNEY & HARDSHIPS</span><span>A ROUTE THROUGH DEEP TIME</span></div>
-      <div class="journey-layout"><div class="journey-copy reveal"><p class="eyebrow blue">THE LANDSCAPE IS THE LAB</p><h2>Read the rock.<br><em>Follow the evidence.</em></h2><p>Curiosityâ€™s route up Mount Sharp passes through layers that record changing environments. The path below is a storytelling schematic, not a live position feed or navigational map.</p><div class="route-legend"><span><i class="legend-line"></i>ROUTE, SCHEMATIC</span><span><i class="legend-point"></i>GEOLOGIC WAYPOINT</span></div></div>
-        <div class="map-card reveal"><div class="map-caption"><span>GALE CRATER / STORY MAP</span><span>NOT FOR NAVIGATION</span></div><svg class="route-map" viewBox="0 0 700 410" role="img" aria-label="Schematic Curiosity route up Mount Sharp"><defs><pattern id="contours" width="120" height="100" patternUnits="userSpaceOnUse"><path d="M-20 80C10 10 80 10 140 35M-10 100C40 35 90 40 140 58M-15 120C25 68 90 68 140 84" fill="none" stroke="#293743" stroke-width="1"/></pattern></defs><rect width="700" height="410" fill="url(#contours)"/><path class="map-route" d="M110 320C165 295 165 255 242 264s80-69 147-60 80-63 132-52 46-61 104-70"/><circle class="waypoint" cx="110" cy="320" r="8"/><circle class="waypoint" cx="242" cy="264" r="7"/><circle class="waypoint" cx="389" cy="204" r="7"/><circle class="waypoint" cx="521" cy="152" r="7"/><circle class="waypoint final" cx="625" cy="82" r="8"/><text x="60" y="358">LANDING SITE</text><text x="182" y="240">YELLOWKNIFE BAY</text><text x="343" y="176">MOUNT SHARP</text><text x="530" y="51">UPHILL, THROUGH TIME</text><path d="M590 350v-46m0 0-7 11m7-11 7 11" stroke="#7dd6ff" fill="none"/><text x="580" y="374">N</text></svg><div class="map-footer"><span>GALE CRATER Â· MARS</span><span>CONCEPTUAL ROUTE / NOT TO SCALE</span></div></div></div>
-      <div class="milestones reveal"><div><span class="mile-year">2012</span><b>TOUCHDOWN</b><p>Curiosity lands inside Gale Crater.</p></div><div><span class="mile-year">2014</span><b>MT. SHARP</b><p>Reaches the mountainâ€™s lower slopes.</p></div><div><span class="mile-year">2019</span><b>CLAY-BEARING UNIT</b><p>Studies a region shaped by ancient water.</p></div><div><span class="mile-year">2022</span><b>SULFATE-BEARING UNIT</b><p>Continues climbing through the rock record.</p></div></div>
+    <section class="section mission section-pad" id="mission" data-narrator="I had 90 sols on the schedule. My assignment: read the rocks.">
+      <div class="section-label"><span>02 / HELLO, MERIDIANI</span><span>MY SCIENCE JOB</span></div>
+      <div class="mission-intro reveal"><p class="eyebrow">MY FIRST MARTIAN ADDRESS</p><h2>Touchdown.<br><em>Now, look around.</em></h2><p>Opportunity landed at Meridiani Planum in January 2004. Scientists chose this region because observations from orbit showed hematite â€” a mineral that can form in the presence of water.</p></div>
+      <div class="mars-scene reveal"><div class="scene-overlay"><span>MERIDIANI PLANUM / FIELD NOTE</span><span>ARTWORK: NASA / JPL / CORNELL</span></div><div class="scene-photo"></div><div class="scene-sun"></div><div class="scene-caption"><span>â€œGeologist mode: on.â€</span><small>CREATIVE NARRATION / FACTS IN THE NOTE BELOW</small></div></div>
+      <div class="fact-pair reveal"><article class="fact-card"><span class="fact-num">A</span><h3>Look for clues</h3><p>Opportunity studied rocks and soil for signs of past water. That helps scientists reconstruct what ancient Mars was like.</p><button class="fact-toggle" aria-expanded="false">SHOW FACT NOTE <span>ï¼‹</span></button><p class="fact-detail" hidden>NASAâ€™s Mars Exploration Rover science goals included studying rocks and soils for evidence of past water and assessing whether some ancient environments could have supported microbial life. Evidence of conditions is not evidence that life was found.</p></article><article class="fact-card"><span class="fact-num">B</span><h3>Meet the â€œblueberriesâ€</h3><p>Little rounded gray mineral spherules dotted the plains. The science team nicknamed them â€œblueberries.â€</p><button class="fact-toggle" aria-expanded="false">SHOW FACT NOTE <span>ï¼‹</span></button><p class="fact-detail" hidden>These small spherules are rich in hematite. Their composition and setting gave researchers clues about water-related processes in Meridiani Planum.</p></article></div>
+      <div class="science-note"><span>SCIENCE CHECK</span><p>Opportunity found evidence of past water and environments that could have been suitable for microbial life. It did <strong>not</strong> discover life.</p></div>
     </section>
 
-    <section class="chapter beyond section-pad" id="beyond">
-      <div class="chapter-meta reveal"><span>05 / BEYOND THE MISSION</span><span>SCIENCE THAT OUTLIVES THE SIGNAL</span></div><div class="beyond-layout"><div class="beyond-copy reveal"><p class="eyebrow blue">A LONGER TIMELINE</p><h2>Every measurement<br>becomes <em>part of us.</em></h2><p>Instruments wear. Dust settles. The missionâ€™s findings keep moving through research, classrooms, and the next generation of questions.</p><a class="text-link" href="https://science.nasa.gov/mission/msl-curiosity/" target="_blank" rel="noreferrer">FOLLOW CURIOSITY WITH NASA <span>â†—</span></a></div><div class="quote-card reveal"><div class="quote-mark">â€œ</div><blockquote>The story of a rover is also the story of the people who built it, the questions they dared to ask, and the world it helped us see.</blockquote><span>â€” ABANDONED, NOT FORGOTTEN</span><div class="quote-lines"></div></div></div>
+    <section class="section tools section-pad" id="discoveries" data-narrator="My tools helped turn rocks into clues. Tap one to meet it.">
+      <div class="section-label"><span>03 / MY LITTLE LAB</span><span>TOOLS THAT HELPED ME NOTICE</span></div>
+      <div class="tools-layout"><div class="tools-copy reveal"><p class="eyebrow">A ROVER IS A SCIENCE TEAMMATE</p><h2>I couldnâ€™t pick up a rock.<br><em>But I could study it.</em></h2><p>My cameras and instruments helped scientists see textures, take measurements, and compare what was nearby. Tap a label to open a short fact card.</p></div>
+        <div class="instrument-board reveal"><div class="instrument-illustration"><svg viewBox="0 0 640 400" role="img" aria-label="Simplified line drawing of an Opportunity rover with clickable instrument markers"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M130 266h392m-332-1-24 49m94-49 7 49m174-49-8 49m94-49 24 49" stroke-width="7"/><circle cx="166" cy="326" r="27" stroke-width="5"/><circle cx="267" cy="326" r="27" stroke-width="5"/><circle cx="433" cy="326" r="27" stroke-width="5"/><circle cx="536" cy="326" r="27" stroke-width="5"/><path d="M183 262v-84l62-31h155l74 43v72H183z" stroke-width="5"/><path d="M262 151v-63l-34-38m34 38 39-37m-39 37v63m145 6 40-49 45 12" stroke-width="4"/><circle cx="260" cy="86" r="13" stroke-width="4"/><path d="M235 190h171m-136-40 16 110m119-109-16 109" stroke-width="3"/></g></svg>
+          <button class="instrument-pin pin-pancam" data-tool="pancam" aria-label="Pancam: panoramic camera">+</button><button class="instrument-pin pin-mini" data-tool="mini" aria-label="Mini-TES: thermal emission spectrometer">+</button><button class="instrument-pin pin-rat" data-tool="rat" aria-label="Rock Abrasion Tool">+</button><span class="drawing-caption">OPPORTUNITY / SIMPLIFIED LINE ART</span></div><div class="tool-detail" aria-live="polite"><span id="tool-name">CHOOSE AN INSTRUMENT</span><p id="tool-description">Tap a blue marker on the rover to see what that tool did.</p></div></div></div>
+      <div class="scroll-quote reveal"><span class="quote-glyph">â€œ</span><p>â€œA good rover doesnâ€™t just go places. It helps us ask better questions about them.â€</p><small>IMAGINED OPPY NARRATION / NOT A HISTORICAL QUOTE</small></div>
     </section>
 
-    <section class="chapter archive section-pad" id="archive">
-      <div class="chapter-meta reveal"><span>06 / NOT FORGOTTEN</span><span>MISSION ARCHIVE</span></div><div class="archive-heading reveal"><div><p class="eyebrow blue">A SMALL ARCHIVE OF BIG JOURNEYS</p><h2>Signals end.<br><em>Legacies donâ€™t.</em></h2></div><p>These missions have concluded or ceased operations. Their records remain open to anyone who wants to follow the trail.</p></div>
-      <div class="mission-grid">
-        <article class="mission-card reveal"><div class="mission-image spirit"></div><div class="mission-body"><div class="mission-head"><span>MER-A / 2004â€”2010</span><span class="status-ended">COMPLETED</span></div><h3>Spirit</h3><p>Explored Gusev Crater, revealing evidence of past water. Contact was lost in 2010.</p><a href="https://science.nasa.gov/mission/mer-spirit/" target="_blank" rel="noreferrer">OPEN MISSION FILE <b>â†—</b></a></div></article>
-        <article class="mission-card reveal"><div class="mission-image opportunity"></div><div class="mission-body"><div class="mission-head"><span>MER-B / 2004â€”2018</span><span class="status-ended">COMPLETED</span></div><h3>Opportunity</h3><p>Found signs of ancient watery environments and traveled farther than planned across Mars.</p><a href="https://science.nasa.gov/mission/mer-opportunity/" target="_blank" rel="noreferrer">OPEN MISSION FILE <b>â†—</b></a></div></article>
-        <article class="mission-card reveal"><div class="mission-image sojourner"></div><div class="mission-body"><div class="mission-head"><span>PATHFINDER / 1997</span><span class="status-ended">COMPLETED</span></div><h3>Sojourner</h3><p>The first rover to operate on Mars, testing a new way to explore another planet.</p><a href="https://science.nasa.gov/mission/mars-pathfinder/" target="_blank" rel="noreferrer">OPEN MISSION FILE <b>â†—</b></a></div></article>
-      </div><div class="active-note reveal"><span class="live-pulse"></span><p><b>STILL ON THE JOB / CURIOSITY</b> â€” Active at Gale Crater. This archive honors past missions without writing Curiosityâ€™s ending for it.</p><a href="https://science.nasa.gov/mission/msl-curiosity/" target="_blank" rel="noreferrer">MISSION STATUS â†—</a></div>
+    <section class="section storm section-pad" id="storm" data-narrator="Then the sky filled with dust. My solar panels needed sunlight.">
+      <div class="section-label"><span>04 / WHEN THE SKY WENT DARK</span><span>A REAL MISSION CHALLENGE</span></div>
+      <div class="storm-layout"><div class="storm-art reveal"><div class="storm-mars"></div><div class="storm-dust dust-one"></div><div class="storm-dust dust-two"></div><div class="storm-caption">MARS / DUST STORM<br><small>ILLUSTRATIVE SCENE</small></div></div><div class="storm-copy reveal"><p class="eyebrow">A POWERFUL PLANET-WIDE STORM</p><h2>Dust in the air.<br><em>Less light for me.</em></h2><p>Opportunity ran on solar power. In 2018, a severe dust storm spread across Mars and blocked sunlight from reaching the roverâ€™s solar panels. Opportunity stopped communicating with Earth on June 10.</p><div class="quiet-meter"><div class="meter-head"><span>EARTH RECEIVES A SIGNAL</span><span>NO SIGNAL</span></div><div class="meter-line"><i></i></div><div class="meter-caption">A STORY DEVICE â€” NOT LIVE TELEMETRY</div></div><p class="story-voice">â€œIâ€™ll wait for the sky to clear.â€ <small>IMAGINED NARRATION</small></p></div></div>
+      <div class="timeline reveal"><div><span>2003</span><b>LAUNCH</b><p>The journey from Earth begins.</p></div><div><span>2004</span><b>LANDING</b><p>Opportunity reaches Meridiani Planum.</p></div><div><span>JUN 2018</span><b>LAST CONTACT</b><p>A dust storm blocks the Sun; no further signal is received.</p></div><div><span>FEB 2019</span><b>MISSION ENDS</b><p>NASA declares Opportunityâ€™s mission complete.</p></div></div>
     </section>
 
-    <section class="closing"><div class="closing-image"></div><div class="closing-content reveal"><p class="eyebrow">END OF THIS FIELD NOTE / BEGINNING OF THE NEXT</p><h2>To explore is<br>to <em>remember.</em></h2><a class="primary-button" href="#home">RETURN TO THE BEGINNING <span>â†‘</span></a></div><div class="closing-coordinates">MARS / SOL UNKNOWN<br>TRANSMISSION: OPEN</div></section>
+    <section class="section legacy section-pad" id="legacy" data-narrator="My mission ended. The questions and discoveries kept traveling.">
+      <div class="section-label"><span>05 / THE JOURNEY KEEPS GOING</span><span>WHAT REMAINS</span></div>
+      <div class="legacy-layout"><div class="legacy-copy reveal"><p class="eyebrow">A LONG WAY PAST THE PLAN</p><h2>Designed for 90 sols.<br><em>I made it to 5,111.</em></h2><p>Opportunityâ€™s planned mission was 90 Martian days. It operated for more than 14 Earth years and traveled 45.16 kilometers (28.06 miles) before the mission ended.</p><div class="distance-counter"><strong data-count="45.16">45.16</strong><span>KM DRIVEN ON MARS<br>NASAâ€™S END-OF-MISSION FIGURE</span></div><p class="data-note">NASA mission-page figures, included as a starter. The project team plans to replace or expand these when its requested updated data arrives.</p></div>
+        <div class="legacy-art reveal"><div class="legacy-orb"></div><img src="assets/mars-global-view.jpg" alt="Global view of Mars assembled from Mars Global Surveyor images, NASA/JPL/Malin Space Science Systems"><span class="orbital-label label-top">90 SOLS / PLANNED</span><span class="orbital-label label-bottom">5,111 SOLS / ACTUAL</span><span class="legacy-sparkle">âœ³</span></div></div>
+      <div class="ending-card reveal"><span class="ending-star">âœ³</span><p>â€œI was a machine built by people, sent to a place none of us could visit in person. Every rock I studied sent a little more of Mars back home.â€</p><small>IMAGINED OPPY NARRATION / BASED ON THE MISSIONâ€™S SCIENCE</small></div>
+    </section>
+
+    <section class="sources section-pad" aria-labelledby="sources-title"><div class="section-label"><span>FIELD NOTES / SOURCES</span><span>FACTS â‰  CHARACTER VOICE</span></div><div class="sources-layout"><div><p class="eyebrow">CHECK THE TRAIL</p><h2 id="sources-title">Real rover.<br><em>Real sources.</em></h2><p>Facts on this page are starter copy from NASA pages. First-person dialogue, art, and transitions are creative storytelling. The final project should be updated with the teamâ€™s forthcoming NASA materials.</p></div><ul><li><a href="https://science.nasa.gov/mission/mer-opportunity/" target="_blank" rel="noreferrer">NASA Science / Opportunity mission <span>â†—</span></a></li><li><a href="https://science.nasa.gov/mission/mars-exploration-rovers-spirit-and-opportunity/science-objectives/" target="_blank" rel="noreferrer">NASA / Spirit and Opportunity science objectives <span>â†—</span></a></li><li><a href="https://photojournal.jpl.nasa.gov/catalog/PIA05495" target="_blank" rel="noreferrer">NASA/JPL Photojournal / Opportunity at El Capitan <span>â†—</span></a></li><li><a href="https://www.nasa.gov/nasa-brand-center/images-and-media/" target="_blank" rel="noreferrer">NASA image and media use guidelines <span>â†—</span></a></li></ul></div></section>
+    <footer><a class="wordmark" href="#top"><span class="wordmark-star">âœ³</span> OPPY <span class="wordmark-sub">FIELD NOTES / 01</span></a><p>STUDENT STORYTELLING FRAMEWORK<br>NOT AN OFFICIAL NASA WEBSITE</p><a class="back-top" href="#top">BACK TO THE STARS â†‘</a></footer>
   </main>
-  <footer><a class="brand" href="#home"><span class="brand-mark">ANF<span>â†—</span></span><span class="brand-name">FIELD NOTES<br><b>MARS / 01</b></span></a><p>AN INDEPENDENT STORYTELLING PROJECT<br>NASA SPACE APPS CHALLENGE</p><div class="credits">IMAGERY: NASA / JPL-CALTECH / MSSS<br>NASA IS NOT AFFILIATED WITH OR ENDORSING THIS PROJECT.</div><a class="back-top" href="#home">BACK TO TOP â†‘</a></footer>
 </body>
 </html>
 
