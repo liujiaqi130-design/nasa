@@ -1,14 +1,12 @@
-Warning: fs was declared with const; use let for reassignable variables.
-Warning: b was declared with const; use let for reassignable variables.
 # Hi, Earth. I’m Opportunity.
 
-A responsive, high-school-friendly scrollytelling prototype about NASA’s Mars Exploration Rover Opportunity. Built with plain HTML, CSS, and vanilla JavaScript. The six chapters are Distance, Machine, Evidence, Journey, Passage of Time, and Not Forgotten.
+An interactive scrollytelling prototype about NASA’s Mars Exploration Rover Opportunity. Built with HTML, CSS, and vanilla JavaScript. There are six chapters: Distance, Machine, Evidence, Journey, Passage of Time, and Not Forgotten.
 
 ## Run it
 
-Open `index.html` in a browser, or open this folder in Visual Studio Code and use Live Server. No build tools or installs are required. An internet connection is needed for the NASA panorama background and Google Fonts.
+Open `index.html` in a browser, or open this folder in Visual Studio Code and use Live Server.
 
-## Project assets
+## Project assets & credits
 
 - `assets/project-intro.MOV` — supplied project introduction video. This is 214 MB; browsers vary in MOV playback support. The page has a download fallback and recommends converting to MP4 for reliable playback. This file is kept in the local project but is too large for a normal GitHub file upload (100 MB per file). Host it separately or export a compressed MP4 before publishing.
 - `assets/opportunity-orbit.gif` — supplied trajectory animation. Its measurements and labels are identified in the page as unverified project artwork, and it is clearly distinguished from Opportunity’s Mars surface route.
@@ -24,7 +22,7 @@ The NASA-sourced facts currently included:
 
 - Opportunity launched July 7, 2003, and landed at Meridiani Planum in January 2004.
 - Its planned primary mission was 90 Martian days, or sols.
-- It operated for 5,111 sols, and drove 45.16 km (28.06 miles).
+- It operated for 5,111 sols and drove 45.16 km (28.06 miles).
 - It studied rocks and soils for evidence of past water; the “blueberries” are small hematite-rich spherules.
 - The rover’s last communication was June 10, 2018; NASA declared the mission complete February 13, 2019.
 
